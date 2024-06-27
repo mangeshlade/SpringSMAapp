@@ -1,11 +1,15 @@
 package edu.cjc.main.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+//import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
 public class Student {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int StudentId;
 	private String StudentFullName;
 	private String StudentEmail;
